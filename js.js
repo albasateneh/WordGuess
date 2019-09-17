@@ -63,16 +63,11 @@ var wrongLettersGuessed = [];
 var numBlanks = 0;
 var remainingGuesses = 0;
 var wins = 0;
-
+var userGuess = ''
 var randomWord = gameWordsArr[Math.floor(Math.random() * gameWordsArr.length)]
 console.log(randomWord)
 
 // Functions
-
-document.onkeyup = function(event) {
-    var userGuess = event.key
-    console.log(userGuess);
-}
 
 chosenWord.push(randomWord);
 
@@ -90,4 +85,16 @@ for (var i = 0; i < numBlanks.length; i ++) {
     
 }
 console.log(blanksAndSuccesses)
+
+document.onkeyup = function(event) {
+    var userGuess = event.key
+    console.log(userGuess);
+    
+    for (var i = 0; i < numBlanks.length; i ++) {
+        if (userGuess === numBlanks[i]) {
+            alert('Correct')
+        }
+        
+    }
+}
 

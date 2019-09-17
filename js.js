@@ -55,10 +55,12 @@ Remember: global variables, then objects, then calls.
 
 // Global Variables
 
-var gameWordsArr = ["apple", "orange", "banana"];
+var gameWordsArr = ["bat", "witch", "candy", "pumpkin", 'dracula', 'frankenstein', 'ghoul'];
 var lettersGuessed = [];
-var blanksAndSpaces = [];
+var blanksAndSuccesses = [];
+var chosenWord = [];
 var wrongLettersGuessed = [];
+var numBlanks = 0;
 var remainingGuesses = 0;
 var wins = 0;
 
@@ -66,40 +68,26 @@ var randomWord = gameWordsArr[Math.floor(Math.random() * gameWordsArr.length)]
 console.log(randomWord)
 
 // Functions
-blanksAndSpaces.push(randomWord);
-
-
-for (i = 0; i < blanksAndSpaces.length; i ++) {
-    var split = blanksAndSpaces[i].split('');
-    var str = split[i];
-    var numbBlanks = str.replace
-    
-    console.log(split);
-    console.log(numbBlanks)
-  
-    
-}
-
-/*for (i = 0; i < split.length; i ++) {
-    var numbBlanks = split.length
-    console.log(numbBlanks)
-    var word = split[i].replace(split[i], '-')
-   var newWord = word.replace(word, '-');
-    console.log(word)
-}
-function strReplace(){
-    var myStr = 'quick_brown_fox';
-    var newStr = myStr.replace(myStr, "-");
-    console.log(newStr)
-}
-
-strReplace()
-*/
-
 
 document.onkeyup = function(event) {
     var userGuess = event.key
     console.log(userGuess);
 }
 
-// Objects 
+chosenWord.push(randomWord);
+
+
+for (var i = 0; i < chosenWord.length; i ++) {
+    var lettersInChosenWord = chosenWord[i].split('');
+    
+}
+
+numBlanks = lettersInChosenWord
+
+
+for (var i = 0; i < numBlanks.length; i ++) {
+    blanksAndSuccesses.push('-');
+    
+}
+console.log(blanksAndSuccesses)
+

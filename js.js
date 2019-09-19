@@ -78,13 +78,16 @@ for (var i = 0; i < chosenWord.length; i ++) {
 }
 
 numBlanks = lettersInChosenWord
-
+console.log(numBlanks)
 
 for (var i = 0; i < numBlanks.length; i ++) {
     blanksAndSuccesses.push('-');
     
 }
-console.log(blanksAndSuccesses)
+
+// Need to relate letter guessed to index of letter in numBlanks 
+// and replace the Blank with correct letter at correspinding index
+
 
 document.onkeyup = function(event) {
     var userGuess = event.key
@@ -92,9 +95,11 @@ document.onkeyup = function(event) {
     
     for (var i = 0; i < numBlanks.length; i ++) {
         if (userGuess === numBlanks[i]) {
-            alert('Correct')
+            console.log([i])
+            var index = [i]
         }
         
     }
+    console.log("console.log: " + index)
+    console.log(blanksAndSuccesses)
 }
-

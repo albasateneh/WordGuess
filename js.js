@@ -60,7 +60,9 @@ var lettersGuessed = [];
 var blanksAndSuccesses = [];
 var chosenWord = [];
 var wrongLettersGuessed = [];
-var numBlanks = 0;
+var numBlanks = [];
+var index = []
+var holdIndex = []
 var remainingGuesses = 0;
 var wins = 0;
 var userGuess = ''
@@ -95,11 +97,11 @@ document.onkeyup = function(event) {
     
     for (var i = 0; i < numBlanks.length; i ++) {
         if (userGuess === numBlanks[i]) {
-            console.log([i])
-            var index = [i]
+          var index = [i]
+            holdIndex.push(index)
         }
         
     }
-    console.log("console.log: " + index)
+    console.log("console.log: " + holdIndex)
     console.log(blanksAndSuccesses)
 }
